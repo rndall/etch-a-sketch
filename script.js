@@ -28,6 +28,14 @@ const changeSize = () => {
 
 const getRandomNumber = (max) => Math.floor(Math.random() * max);
 
+const getRandomRgb = () => {
+	const r = getRandomNumber(255);
+	const g = getRandomNumber(255);
+	const b = getRandomNumber(255);
+
+	return `rgb(${r}, ${g}, ${b})`;
+};
+
 loadDivs();
 
 container.addEventListener("mouseover", (e) => {
