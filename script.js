@@ -7,3 +7,11 @@ for (let i = 0; i < size * size; i++) {
 	div.style.flex = `1 1 ${100 / size}%`;
 	container.appendChild(div);
 }
+
+container.addEventListener("mouseover", (e) => {
+	const square = e.target;
+
+	if (square.id !== "container") {
+		square.classList.add("highlighted");
+	}
+});
