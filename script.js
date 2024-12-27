@@ -42,7 +42,11 @@ container.addEventListener("mouseover", (e) => {
 	const square = e.target;
 
 	if (square.id !== "container") {
-		square.classList.add("highlighted");
+		// square.classList.add("highlighted");
+		square.style.backgroundColor = getRandomRgb();
+
+		const opacity = square.style.opacity;
+		square.style.opacity = +opacity + 0.1;
 	}
 });
 
