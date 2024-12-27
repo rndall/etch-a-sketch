@@ -3,6 +3,16 @@ const button = document.querySelector("button");
 
 let size = 16;
 
+const loadDivs = () => {
+	container.innerHTML = "";
+
+	for (let i = 0; i < size * size; i++) {
+		const div = document.createElement("div");
+		div.style.flex = `1 1 ${100 / size}%`;
+		container.appendChild(div);
+	}
+};
+
 const changeSize = () => {
 	const sizeInput = +prompt(
 		"Enter number of squares per side of the grid (Max = 100): ",
@@ -10,16 +20,13 @@ const changeSize = () => {
 
 	if (Number.isInteger(sizeInput)) {
 		size = sizeInput;
+		loadDivs();
 	} else {
 		alert("Error");
 	}
 };
 
-for (let i = 0; i < size * size; i++) {
-	const div = document.createElement("div");
-	div.style.flex = `1 1 ${100 / size}%`;
-	container.appendChild(div);
-}
+loadDivs();
 
 container.addEventListener("mouseover", (e) => {
 	const square = e.target;
