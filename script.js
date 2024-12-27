@@ -1,6 +1,19 @@
 const container = document.querySelector("#container");
+const button = document.querySelector("button");
 
 let size = 16;
+
+const changeSize = () => {
+	const sizeInput = +prompt(
+		"Enter number of squares per side of the grid (Max = 100): ",
+	);
+
+	if (Number.isInteger(sizeInput)) {
+		size = sizeInput;
+	} else {
+		alert("Error");
+	}
+};
 
 for (let i = 0; i < size * size; i++) {
 	const div = document.createElement("div");
@@ -15,3 +28,5 @@ container.addEventListener("mouseover", (e) => {
 		square.classList.add("highlighted");
 	}
 });
+
+button.addEventListener("click", changeSize);
