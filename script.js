@@ -26,6 +26,8 @@ const changeSize = () => {
 	}
 };
 
+const getRandomNumber = (max) => Math.floor(Math.random() * max);
+
 loadDivs();
 
 container.addEventListener("mouseover", (e) => {
