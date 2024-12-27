@@ -18,6 +18,19 @@ body {
   gap: 32px;
 }
 
+button {
+  font: inherit;
+  border: none;
+  border-radius: 8px;
+  background-color: hsl(0, 8%, 21%);
+  color: hsl(0, 0%, 94%);
+  padding: 8px 16px;
+}
+
+button:hover {
+  background-color: hsl(0, 8%, 24%);
+}
+
 #container {
   width: 500px;
   height: 500px;
