@@ -13,12 +13,19 @@ body {
   font-family: sans-serif;
   min-height: 100dvh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+button {
+  margin-top: 16px;
 }
 
 #container {
   width: 500px;
   height: 500px;
-  margin: auto;
   display: flex;
   border: 2px solid black;
   flex-wrap: wrap;
